@@ -567,17 +567,39 @@ h3 {
 
 .contact-panel {
   display: grid;
-  gap: 14px;
+  gap: 12px;
   margin-top: 28px;
   padding: 28px;
   border: 1px solid var(--line);
   border-left: 6px solid var(--teal);
   border-radius: 8px;
   background: #fbfbf8;
-  font-weight: 700;
 }
 
-.contact-panel a {
+.contact-line {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+  color: var(--ink);
+}
+
+.contact-line span {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.contact-line strong {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.5;
+}
+
+a.contact-line {
+  text-decoration: none;
+}
+
+a.contact-line strong {
   color: var(--teal-dark);
 }
 
@@ -734,6 +756,15 @@ h3 {
   .service-card,
   .proof-card {
     min-height: auto;
+  }
+
+  .contact-panel {
+    padding: 22px;
+  }
+
+  .contact-line {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .footer {
